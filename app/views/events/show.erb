@@ -2,8 +2,7 @@
 <p><%= @event.long %></p>
 <p><%= @event.lat %></p>
 <p><%= @event.color %></p>
-<!-- lat: -25.363
-lng: 131.044 -->
+
 
 
 
@@ -12,13 +11,16 @@ lng: 131.044 -->
     <script>
       var map;
       var latitude = <%= @event.lat.to_f %>;
-      console.log(latitude);
       var longitude = <%= @event.long.to_f %>;
-      console.log(longitude);
+      var uluru = {lat: latitude, lng: longitude};
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: latitude, lng: longitude},
+          center: uluru,
           zoom: 4
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
         });
       }
     </script>
