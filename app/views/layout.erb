@@ -12,19 +12,21 @@
   <title></title>
 </head>
 <body>
-  <ul class="navbar">
-    <li class="pipe-separate  left"><a href="/">home</a></li>
-    <% if current_user %>
-      <form action="/logout" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input class="form-styled-like-link" type="submit" value="logout">
+  <nav class="login">
+    <ul class="navbar">
+      <li class="pipe-separate  left"><a href="/">home</a></li>
+        <% if current_user %>
+          <form action="/logout" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input class="form-styled-like-link" type="submit" value="logout">
+          </form>
           <li class="pipe-separate  left"><a href="/users/<%= current_user.id %>"><%= current_user.name %></a></li>
-      </form>
-    <% else %>
-      <li class="pipe-separate  left"><a href="/login">login</a></li>
-      <li class="pipe-separate  left"><a href="/users/new">register</a></li>
-    <% end %>
-        </ul>
+        <% else %>
+          <li class="pipe-separate  left"><a href="/login">login</a></li>
+          <li class="pipe-separate  left"><a href="/users/new">register</a></li>
+        <% end %>
+    </ul>
+  </nav>
   <%= yield %>
 </body>
 </html>

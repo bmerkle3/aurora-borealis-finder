@@ -1,8 +1,20 @@
-<p>There is a <%= @event.value %>% chance of an aurora borealis event ocurring at this location based on current conditions.</p>
+  <% if  @event.color == 'red' %>
+    <img class="color-pic" src="images/red.jpg">
+  <% elsif @event.color == 'orange'%>
+    <img class="color-pic" src="/images/orange.jpg">
+  <% elsif @event.color == 'yellow'%>
+    <img class="color-pic" src="images/yellow.jpg">
+  <% elsif @event.color == 'green'%>
+    <img class="color-pic" src="images/green.jpg">
+  <% elsif @event.color == 'blue'%>
+    <img class="color-pic" src="images/blue.jpg">
+  <% elsif @event.color == 'purple'%>
+    <img class="color-pic" src="images/purple.jpg">
+  <% end %>
+<p>There is a <%= @event.value %>% chance that an aurora borealis event will occur at this location based on current conditions.</p>
 <p>latitude: <%= @event.lat %></p>
 <p>longitude: <%= @event.long %></p>
-<p>predicted color: <%= @event.color %></p>
-
+<p>predicted sky color: <%= @event.color %></p>
 
   <div id="map"></div>
     <script>
@@ -17,10 +29,6 @@
         });
         var marker = new google.maps.Marker({
           position: uluru,
-          // icon: {
-          //   path: google.maps.SymbolPath.CIRCLE,
-          //   scale: 18
-          // },
           map: map
         });
         var circle = new google.maps.Circle({
@@ -36,7 +44,6 @@
     circle.bindTo('center', marker, 'position');
       }
     </script>
+<img src="/images/colors_explained.gif" alt="chart explaining why different colors are represented in an aurora borealis" height="200" width="300">
     <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_TOKEN"] %>&callback=initMap"
     async defer></script>
-
-

@@ -27,15 +27,39 @@
   }
 }
 
+#button-section {
+  background-color: white;
+  opacity: .4;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  width: 400px;
+  border-radius: 25px;
+
+}
+
+#go-button {
+  width: 75px;
+  background-color: #666699;
+  color: black;
+  font-weight: 900;
+}
+
 .container {
   margin: 20px auto;
   width: 800px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  position:absolute;
+  top:230px;
+  left:280px;
 }
 
 .container h1 {
   font-size: 17pt;
+}
+
+.color-pic {
+  width: 50%;
 
 }
 
@@ -73,6 +97,9 @@ nav li a {
 nav li a:hover {
   text-decoration: underline;
 }
+/*.login {
+  text-align: right;
+}*/
 
 form label {
   font-weight: bold;
@@ -103,8 +130,12 @@ form.quirks {
   width: 200px;
 }
 
-.navbar {
+.login {
+  padding-top: 10px;
+}
+.navbar a {
   list-style: none;
+  color: #d0d0e1;
 }
 
 .form-styled-like-link {
