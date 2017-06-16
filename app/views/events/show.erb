@@ -20,6 +20,11 @@
         });
         var marker = new google.maps.Marker({
           position: uluru,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 18
+          },
+
           map: map
         });
       }
