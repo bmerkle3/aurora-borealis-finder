@@ -24,7 +24,7 @@ class User < ApplicationRecord
   end
 
   def validate_password
-    if @raw_password == "" || nil
+    if @raw_password == "" || @raw_password ==  nil
       errors.add(:password, "is required")
     end
   end
