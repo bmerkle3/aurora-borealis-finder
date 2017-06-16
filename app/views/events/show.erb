@@ -11,10 +11,14 @@ lng: 131.044 -->
   <div id="map"></div>
     <script>
       var map;
+      var latitude = <%= @event.lat.to_f %>;
+      console.log(latitude);
+      var longitude = <%= @event.long.to_f %>;
+      console.log(longitude);
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: {lat: latitude, lng: longitude},
+          zoom: 4
         });
       }
     </script>

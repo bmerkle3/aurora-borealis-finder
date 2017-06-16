@@ -17,9 +17,5 @@ end
 
 get '/events/:id' do
   @event = Event.find_by(id: params[:id])
-  @latitude = @event.lat.to_f
-  p @latitude.class
-  @longitude = @event.long.to_f
-  p @longitude.class
   erb :'events/show'
 end

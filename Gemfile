@@ -16,6 +16,7 @@ gem 'rake', '~> 12.0.0'
 gem 'bcrypt'
 
 gem 'shotgun'
+gem 'dotenv'
 
 group :development, :test do
   gem 'faker', '~> 1.7.3'
