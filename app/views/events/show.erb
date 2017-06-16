@@ -1,10 +1,7 @@
-<p><%= @event.value %></p>
-<p><%= @event.long %></p>
-<p><%= @event.lat %></p>
-<p><%= @event.color %></p>
-
-
-
+<p>There is a <%= @event.value %>% chance of an aurora borealis event ocurring at this location based on current conditions.</p>
+<p>latitude: <%= @event.lat %></p>
+<p>longitude: <%= @event.long %></p>
+<p>predicted color: <%= @event.color %></p>
 
 
   <div id="map"></div>
@@ -35,7 +32,7 @@
           map: map,
           radius: 50093 // in meters
         });
-        var cityCircle = new google.maps.Circle(circle);                 
+        var cityCircle = new google.maps.Circle(circle);
     circle.bindTo('center', marker, 'position');
       }
     </script>
