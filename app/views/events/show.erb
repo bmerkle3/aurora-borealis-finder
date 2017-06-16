@@ -20,13 +20,23 @@
         });
         var marker = new google.maps.Marker({
           position: uluru,
-          icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 18
-          },
-
+          // icon: {
+          //   path: google.maps.SymbolPath.CIRCLE,
+          //   scale: 18
+          // },
           map: map
         });
+        var circle = new google.maps.Circle({
+          strokeColor: "#006DFC",
+          strokeOpacity: 0.4,
+          strokeWeight: 2,
+          fillColor: "#006DFC",
+          fillOpacity: 0.15,
+          map: map,
+          radius: 50093 // in meters
+        });
+        var cityCircle = new google.maps.Circle(circle);                 
+    circle.bindTo('center', marker, 'position');
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_TOKEN"] %>&callback=initMap"
