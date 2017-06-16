@@ -1,3 +1,12 @@
+#latlng {
+  width: 225px;
+}
+
+#map {
+  height: 225px;
+}
+
+
 .container {
   margin: 20px auto;
   width: 800px;
