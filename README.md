@@ -1,26 +1,11 @@
-### Build Something Beautiful & Meaningful
+### Aurora Borealis Finder
 
-#### Learning Competencies
-  * Building a web application from scratch
-  * Managing the development process
+Uses Ruby, JavaScript, and APIs such as GoogleMaps and Auroras.live, to map out the most likely occurrence of an Aurora Borealis event at any given moment. 
 
-#### Summary
-You should work by yourself.
+![alt text](/images/event_mapped.png)
 
-You've learned a lot in phase 2: Sinatra, Active Record, JavaScript, Agile, and much more. Each of these tools is useful in its own right, but together, they give you something much more powerful — the ability to build a web application from nothing.
+![alt text](/images/home_screen.png)
 
-For this challenge, your assignment is to build something. It can be as practical or trivial as you would want, as long as it is a 100% functional, full-stack web application.
-
-You can build anything you want, provided that it meets the following requirements:
-
-- It has a database
-- Construct a controller that has at least 1 RESTful resource
-- It uses an API (what does this mean?! explore!)
-- It is styled
-- It utilizes JavaScript
-- It is deployed to Heroku
-
-Once you've come up with an idea, get one of your teachers to approve it.
 
 ### Resources
 - [List of Public API's](https://www.publicapis.com/)
