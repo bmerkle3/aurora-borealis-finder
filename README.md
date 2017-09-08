@@ -1,6 +1,6 @@
 ### Aurora Borealis Finder
 
-Uses Ruby, JavaScript, and APIs such as GoogleMaps and Auroras.live, to map out the most likely occurrence of an Aurora Borealis event at any given moment. 
+Uses Ruby, Sinatra, JavaScript, and APIs such as GoogleMaps and Auroras.live, to map out the most likely occurrence of an Aurora Borealis event at any given moment. 
 
 
 ![home page](https://user-images.githubusercontent.com/16695037/29744419-f1782962-8a69-11e7-99c5-1f15a046a48a.png)

@@ -1,3 +1,3 @@
 class Event < ApplicationRecord
-  # Remember to create a migration!
+ belongs_to :user
 end
