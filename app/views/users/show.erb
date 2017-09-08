@@ -1,1 +1,9 @@
  <p>Welcome, <%= @user.name %>!</p>
+
+  <%if @user.events %>
+  <% @user.events.each do |event| %>
+      <%= event.long %>
+      <br>
+      <%= event.lat %>
+      <% end %>
+  <% end %>

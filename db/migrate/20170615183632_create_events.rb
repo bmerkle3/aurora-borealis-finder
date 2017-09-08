@@ -5,6 +5,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :lat
       t.string :color
       t.string :value
+      t.integer :user_id
       t.timestamps(null: false)
     end
   end
